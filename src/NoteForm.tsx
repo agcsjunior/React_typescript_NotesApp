@@ -1,21 +1,29 @@
-import {Form} from "react-bootstrap"
+import {Col, Form, Row, Stack} from "react-bootstrap"
+import CreatableReactSelect from "react-select/creatable"
+
 
 export function NoteForm() {
     
     
-    return(<Form>
-    <Stack gap ={4}>
-      <Row>
-        <Col1>
-        <Form.Group controlId = "title">
-          <Form.Label > Title</Form.Label>
-          <Form.Control required />
+    return(
+    <Form>
+       <Stack>
+        <Row>
+          <Col>
+          <Form.Group>
+            <Form.Label>Title</Form.Label>
+            <Form.Control required />
+          </Form.Group>
+          </Col>
+          <Col>
+          <Form.Group>
+            <Form.Label>Tags</Form.Label>
+            <CreatableReactSelect isMulti />
 
-        </Form.Group>
-
-        </Col1>
-      </Row>
-    </Stack>
+          </Form.Group>
+          </Col>
+        </Row>
+       </Stack>
       
     </Form>
 
